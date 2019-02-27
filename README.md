@@ -7,6 +7,11 @@ on USDT -> USDT arb cycles.
 It was found to be unprofitable after many, many hours of development. I have decided
 to open source it in the hope that others may learn or profit from it.
 
+If you are trying to make a profit from the bot, perhaps exploring the following avenues would be useful initially:
+ - Implement both orderbook channels which binance provides for a more up to date orderbook
+ - Profile Orderboob + partial orderbook channels vs binance's mini ticker
+ - Rework how the bot recieves messages, this aspect is not currently pretty or performant
+
 It works by retrieving market prices and order book depths. It places prices into
 a graph, and then we use a modified bellman-ford algorithm to find a negative
 cycle between nodes. In this instance, a negative cycle will indicate a list of
